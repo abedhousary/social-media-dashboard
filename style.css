@@ -1,0 +1,252 @@
+:root{
+--LimeGreen:hsl(163,72%,41%);
+--BrightRed:hsl(356,69%,56%);
+--Facebook:hsl(208,92%,53%);
+--Twitter:hsl(203,89%,53%);
+--Instagram:linear-gradient(to right,hsl(37,97%,70%),hsl(329,70%,58%));
+--YouTube:hsl(348,97%,39%);
+--VeryDarkBlue:hsl(230,17%,14%);
+--DarkDesaturatedBlue:hsl(228,28%,20%);
+--DesaturatedBlue:hsl(228,34%,66%);
+--White:hsl(0,0%,100%);
+--VeryPaleBlue:hsl(225,100%,98%);
+--LightGrayishBlue:hsl(227,47%,96%);
+--DarkGrayishBlue:hsl(228,12%,44%);
+}
+* {
+    font-family: 'Inter', sans-serif;
+}
+.toggle-on{
+    background:linear-gradient(to right,hsl(210,78%,56%),hsl(146,68%,55%)) ;
+}
+.toggle-off{
+    background:hsl(230,22%,74%);
+}
+body {
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.boxed-container{
+    width: 80%;
+    height: 700px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    margin:20px 0px 0px 20px;
+    position: relative;
+}
+.title {
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--VeryDarkBlue);
+}
+
+.totalfol {
+    font-weight: 700;
+    color:var(--DarkGrayishBlue) ;
+}
+.right-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+}
+
+.label {
+     font-weight: 700;
+    color:var(--DarkGrayishBlue) ;
+}
+.toggler {
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    margin-left: 10px;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--White);
+    /* position: absolute;
+    right: 3px; */
+    transition:0.4s;
+    cursor: pointer;
+    transform: translateX(15px);
+}
+.toleft {
+    transform: translateX(-14px) !important;
+}
+
+.dark-mode {
+    background-color: var(--VeryDarkBlue) !important;
+}
+.dark-mode-card {
+    background-color: var(--DarkDesaturatedBlue) !important;
+}
+.light-mode-text {
+    color: var(--White) !important;
+}
+.off {
+    left: 3px !important;
+}
+
+.card-container {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: 250px;
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    background-color: var(--LightGrayishBlue);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 45px;
+    cursor: pointer;
+    /* box-shadow: 0px -3px 0px 0px var(--Twitter); */
+}
+.card::before {
+    content:"";
+    width: 100%;
+    height: 5px;
+    background-color: var(--Twitter);
+    position: absolute;
+    top: 0;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.card:nth-child(3)::before {
+    background:var(--Instagram);
+}
+
+.card:nth-child(4)::before {
+    background:var(--YouTube);
+}
+.card:hover {
+    background-color: hsla(228, 34%, 66%, 0.261);
+}
+.social-platform {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+}
+.accountname {
+    margin-left: 5px;
+    font-weight: 700;
+    color:var(--DarkGrayishBlue) ;
+    font-size: 12px;
+}
+.follower-counter {
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+    font-size: 61px;
+    margin-top: 10px;
+}
+.type {
+   color:var(--DarkGrayishBlue) ;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+}
+.status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10px;
+    margin-top: 30px;
+    font-weight: 700;
+    color: var(--LimeGreen);
+}
+.down {
+    color: var(--BrightRed) !important;
+}
+.overview {
+   font-weight: 700;
+   color:var(--DarkGrayishBlue) ;
+   font-size: 21px;
+   margin: 20px 0px 0px 20px;
+}
+.overview-cards {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: row;
+ 
+}
+.over-card {
+    width: 250px;
+    height: 120px;
+    background-color: var(--LightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    margin-right: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.over-card:hover {
+    background-color: hsla(228, 34%, 66%, 0.261);
+       transform: rotate3d(103, 90, -22, 30deg);
+}
+.social-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     margin:20px 0px 0px 20px;
+     position: relative;
+}
+.type-of {
+    margin-left: 5px;
+    font-weight: 700;
+    color:var(--DarkGrayishBlue) ;
+    font-size: 14px;
+   
+} 
+.social-icon {
+    position: absolute;
+    right: 25px;
+}
+.social-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     margin:20px 0px 0px 20px;
+     position: relative;
+}
+.count {
+    color: var(--VeryDarkBlue);
+    font-weight: 700;
+    font-size: 31px;
+    margin-left: 5px;
+}
+.prc {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--LimeGreen);
+    font-weight: 700;
+    font-size: 14px;
+}
